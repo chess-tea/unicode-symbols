@@ -19,9 +19,11 @@
     }
   },
   "scripts": {
-    "test": "esy '@test' x test_exe"
+    "test": "esy '@test' x test_exe",
+    "gen": "esy '@gen' x gen"
   },
   "dependencies": {
+    "@chess-tea/bread": "*",
     "@esy-ocaml/reason": ">= 3.6.0 < 4.0.0",
     "@opam/dune": ">=2.6",
     "@reason-native/console": "^0.1.0",
@@ -36,6 +38,7 @@
     "@reason-native/rely": "*"
   },
   "resolutions": {
+    "@chess-tea/bread": "chess-tea/bread:package.json#078b9d5",
     "@reason-native/fs": "ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552",
     "@reason-native/fp": "ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552"
   }

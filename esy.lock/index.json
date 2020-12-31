@@ -1,5 +1,5 @@
 {
-  "checksum": "b1fb46304bcc083bf8f9547c504e720b",
+  "checksum": "e2b8e268619fb17e5f0eed0591883fee",
   "root": "unicode_symbols@link-dev:./package.json",
   "node": {
     "unicode_symbols@link-dev:./package.json": {
@@ -15,7 +15,8 @@
       "dependencies": [
         "refmterr@3.3.2@d41d8cd9", "ocaml@4.10.2000@d41d8cd9",
         "@reason-native/console@0.1.0@d41d8cd9",
-        "@opam/dune@opam:2.7.1@f5f493bc", "@esy-ocaml/reason@3.6.2@d41d8cd9"
+        "@opam/dune@opam:2.7.1@f5f493bc", "@esy-ocaml/reason@3.6.2@d41d8cd9",
+        "@chess-tea/bread@github:chess-tea/bread:package.json#078b9d5@d41d8cd9"
       ],
       "devDependencies": [
         "@reason-native/rely@3.2.1@d41d8cd9",
@@ -1156,6 +1157,22 @@
         "@opam/merlin-extend@opam:0.6@404f814c",
         "@opam/menhir@opam:20201216@1a09d886",
         "@opam/fix@opam:20201120@5c318621", "@opam/dune@opam:2.7.1@f5f493bc"
+      ],
+      "devDependencies": []
+    },
+    "@chess-tea/bread@github:chess-tea/bread:package.json#078b9d5@d41d8cd9": {
+      "id":
+        "@chess-tea/bread@github:chess-tea/bread:package.json#078b9d5@d41d8cd9",
+      "name": "@chess-tea/bread",
+      "version": "github:chess-tea/bread:package.json#078b9d5",
+      "source": {
+        "type": "install",
+        "source": [ "github:chess-tea/bread:package.json#078b9d5" ]
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.10.2000@d41d8cd9", "@opam/dune@opam:2.7.1@f5f493bc",
+        "@esy-ocaml/reason@3.6.2@d41d8cd9"
       ],
       "devDependencies": []
     }

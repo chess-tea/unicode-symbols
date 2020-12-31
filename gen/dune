@@ -1,0 +1,9 @@
+(executable
+  (name Gen)
+  (public_name gen)
+  (package gen)
+  (ocamlopt_flags -g -w -9-27)
+  (ocamlc_flags -g -w -9-27)
+  (libraries bread)
+)
+(include_subdirs unqualified)
