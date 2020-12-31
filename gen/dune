@@ -4,6 +4,11 @@
   (package gen)
   (ocamlopt_flags -g -w -9-27)
   (ocamlc_flags -g -w -9-27)
-  (libraries bread)
+  (libraries
+    bread
+    console.lib
+    fp
+    fs.lib
+  )
 )
 (include_subdirs unqualified)
