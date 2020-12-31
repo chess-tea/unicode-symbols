@@ -2,6 +2,38 @@
 
 An easy way to reference and use different unicode symbols.
 
+# Usage
+
+The `UnicodeSymbols` module is meant to give easy access to `strings` for common
+unicode symbols. This prevents you from needing to copy/paste the symbols, or
+figuring out how to convert from a hex code to the symbol.
+
+```reason
+let box =
+  UnicodeSymbols.BoxDrawings.lightDownAndRight
+  ++ UnicodeSymbols.BoxDrawings.lightHorizontal
+  ++ UnicodeSymbols.BoxDrawings.lightDownAndLeft
+  ++ "\n"
+  ++ UnicodeSymbols.BoxDrawings.lightUpAndRight
+  ++ UnicodeSymbols.BoxDrawings.lightHorizontal
+  ++ UnicodeSymbols.BoxDrawings.lightUpAndLeft;
+
+print_endline(box);
+```
+
+Outputs a tiny box:
+
+```
+┌─┐
+└─┘
+```
+
+_Note: This is not a complete set of the unicode symbols, but it is very easy to
+add more symbols to the output (see [`Gen.re`](./gen/Gen.re)). If there is a
+set you want to use, please open an issue or pull request!_
+
+# Contributing
+
 ## Install `esy`
 
 Globally install [`esy`](https://www.npmjs.com/package/esy) so that the `esy`
