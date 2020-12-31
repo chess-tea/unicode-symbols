@@ -1,6 +1,6 @@
 (library
-  (name HelloWorld)
-  (public_name hello_world)
+  (name UnicodeSymbols)
+  (public_name unicode_symbols)
   (ocamlopt_flags -w -9-27)
   (ocamlc_flags -w -9-27)
   (libraries)

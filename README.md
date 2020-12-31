@@ -1,4 +1,4 @@
-# `hello_world`
+# `unicode_symbols`
 
 This is a Reason library.
 
@@ -12,7 +12,7 @@ appropriate filenames and contents for a new library name.
   the script when required.
 
 ```bash
-scripts/rename hello_world my_library
+scripts/rename unicode_symbols my_library
 ```
 
 - Remove this section from the readme after completing the rename.
@@ -36,7 +36,7 @@ esy
 
 _This is a combination of `esy install` and `esy build`_
 
-## Run tests for `HelloWorld.re`
+## Run tests for `UnicodeSymbols.re`
 
 ```bash
 esy test

@@ -6,7 +6,7 @@
   (libraries
     console.lib
     rely.lib
-    hello_world
+    unicode_symbols
   )
   (modules :standard \ TestExe)
 )
