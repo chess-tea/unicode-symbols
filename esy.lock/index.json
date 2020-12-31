@@ -1,5 +1,5 @@
 {
-  "checksum": "e2b8e268619fb17e5f0eed0591883fee",
+  "checksum": "dbe501f2e15e289b396eff977a32eca3",
   "root": "unicode_symbols@link-dev:./package.json",
   "node": {
     "unicode_symbols@link-dev:./package.json": {
@@ -14,16 +14,15 @@
       "overrides": [],
       "dependencies": [
         "refmterr@3.3.2@d41d8cd9", "ocaml@4.10.2000@d41d8cd9",
-        "@reason-native/console@0.1.0@d41d8cd9",
-        "@opam/dune@opam:2.7.1@f5f493bc", "@esy-ocaml/reason@3.6.2@d41d8cd9",
-        "@chess-tea/bread@github:chess-tea/bread:package.json#078b9d5@d41d8cd9"
+        "@opam/dune@opam:2.7.1@f5f493bc", "@esy-ocaml/reason@3.6.2@d41d8cd9"
       ],
       "devDependencies": [
         "@reason-native/rely@3.2.1@d41d8cd9",
         "@reason-native/fs@github:ManasJayanth/reason-native:fs.json#1240e2757a9685473280b9543f6ae2d8bd53c552@d41d8cd9",
         "@reason-native/fp@github:ManasJayanth/reason-native:fp.json#1240e2757a9685473280b9543f6ae2d8bd53c552@d41d8cd9",
         "@opam/ocaml-lsp-server@github:ocaml/ocaml-lsp:ocaml-lsp-server.opam#bd6e4933c0685e4eb1ab9db88f10f64fdff8e578@d41d8cd9",
-        "@opam/merlin@opam:3.4.2@9a4d1fd4"
+        "@opam/merlin@opam:3.4.2@9a4d1fd4",
+        "@chess-tea/bread@github:chess-tea/bread:package.json#078b9d5@d41d8cd9"
       ]
     },
     "refmterr@3.3.2@d41d8cd9": {
