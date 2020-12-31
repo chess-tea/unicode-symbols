@@ -29,6 +29,14 @@ let config = [
   ),
 ];
 
+// Some module names we never want to clean.
+let shouldClean = name => {
+  switch (name) {
+  | "Currency" => false
+  | _ => true
+  };
+};
+
 let uncapitalize = String.uncapitalize_ascii;
 let capitalize = String.capitalize_ascii;
 module String = Bread.String;
@@ -120,7 +128,8 @@ let contents =
           ();
           if (inRange(int)) {
             let cleanName =
-              if (String.indexOfInt(moduleName, name) === 0) {
+              if (shouldClean(moduleName)
+                  && String.indexOfInt(moduleName, name) === 0) {
                 String.sliceToEnd(String.length(moduleName), name);
               } else {
                 name;
@@ -135,11 +144,11 @@ let contents =
                 [
                   "",
                   indent
-                  ++ "/** "
+                  ++ "/** '"
                   ++ unicodeFromInt(int)
-                  ++ " - "
+                  ++ "' ("
                   ++ hex
-                  ++ " */",
+                  ++ ") */",
                   indent ++ "let " ++ cleanName ++ " = fromInt(" ++ hex ++ ");",
                 ],
                 ...innerRev^,
@@ -178,4 +187,8 @@ let contents =
 let contents = List.concat(contents);
 
 let lines = header @ contents;
+
+// Remove the extra new line at the end.
+let lines = lines |> List.rev |> List.tl |> List.rev;
+
 Fs.writeTextExn(Fp.absoluteExn(outputFile), lines);
