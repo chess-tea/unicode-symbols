@@ -13,21 +13,18 @@ let config = [
       (0x00A0, 0x00A0),
     ],
   ),
-  (
-    "Currency",
-    [
-      // Some currency symbols. TODO: Find more.
-      (0x00A2, 0X00A5),
-    ],
-  ),
-  (
-    "BoxDrawings",
-    [
-      // Symbols to draw boxes and tables.
-      (0x2500, 0x257F),
-    ],
-  ),
+  ("Block", [(0x2580, 0x259F)]),
+  ("BoxDrawings", [(0x2500, 0x257F)]),
+  ("Currency", [(0x0024, 0x0024), (0x00A2, 0x00A5), (0x20A0, 0x20BF)]),
 ];
+
+// Some symbols need some extra description.
+let comment =
+  Bread.IntMap.fromList([
+    (0x20A0, "Not the Euro. Not widely used."),
+    (0x20A4, "Not widely used. Preferred character for lira is `pound`."),
+    (0x20A8, "India, unofficial legacy practice. See `indianRupee`."),
+  ]);
 
 // Some module names we never want to clean.
 let shouldClean = name => {
@@ -138,6 +135,14 @@ let contents =
             // It was formerly TitleCase, this converts it to camelCase.
             let cleanName = uncapitalize(cleanName);
 
+            let comment =
+              if (Bread.IntMap.hasKey(int, comment)) {
+                let value = Bread.IntMap.getExn(int, comment);
+                " - " ++ value;
+              } else {
+                "";
+              };
+
             // Add the lines representing this symbol.
             innerRev :=
               [
@@ -148,7 +153,9 @@ let contents =
                   ++ unicodeFromInt(int)
                   ++ "' ("
                   ++ hex
-                  ++ ") */",
+                  ++ ")"
+                  ++ comment
+                  ++ " */",
                   indent ++ "let " ++ cleanName ++ " = fromInt(" ++ hex ++ ");",
                 ],
                 ...innerRev^,

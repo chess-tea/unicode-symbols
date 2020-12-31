@@ -18,18 +18,102 @@ let fromInt = n => {
 /** ' ' (0x00A0) */
 let noBreakSpace = fromInt(0x00A0);
 
-module Currency = {
-  /** '¢' (0x00A2) */
-  let centSign = fromInt(0x00A2);
+module Block = {
+  /** '▀' (0x2580) */
+  let upperHalfBlock = fromInt(0x2580);
 
-  /** '£' (0x00A3) */
-  let poundSign = fromInt(0x00A3);
+  /** '▁' (0x2581) */
+  let lowerOneEighthBlock = fromInt(0x2581);
 
-  /** '¤' (0x00A4) */
-  let currencySign = fromInt(0x00A4);
+  /** '▂' (0x2582) */
+  let lowerOneQuarterBlock = fromInt(0x2582);
 
-  /** '¥' (0x00A5) */
-  let yenSign = fromInt(0x00A5);
+  /** '▃' (0x2583) */
+  let lowerThreeEighthsBlock = fromInt(0x2583);
+
+  /** '▄' (0x2584) */
+  let lowerHalfBlock = fromInt(0x2584);
+
+  /** '▅' (0x2585) */
+  let lowerFiveEighthsBlock = fromInt(0x2585);
+
+  /** '▆' (0x2586) */
+  let lowerThreeQuartersBlock = fromInt(0x2586);
+
+  /** '▇' (0x2587) */
+  let lowerSevenEighthsBlock = fromInt(0x2587);
+
+  /** '█' (0x2588) */
+  let fullBlock = fromInt(0x2588);
+
+  /** '▉' (0x2589) */
+  let leftSevenEighthsBlock = fromInt(0x2589);
+
+  /** '▊' (0x258A) */
+  let leftThreeQuartersBlock = fromInt(0x258A);
+
+  /** '▋' (0x258B) */
+  let leftFiveEighthsBlock = fromInt(0x258B);
+
+  /** '▌' (0x258C) */
+  let leftHalfBlock = fromInt(0x258C);
+
+  /** '▍' (0x258D) */
+  let leftThreeEighthsBlock = fromInt(0x258D);
+
+  /** '▎' (0x258E) */
+  let leftOneQuarterBlock = fromInt(0x258E);
+
+  /** '▏' (0x258F) */
+  let leftOneEighthBlock = fromInt(0x258F);
+
+  /** '▐' (0x2590) */
+  let rightHalfBlock = fromInt(0x2590);
+
+  /** '░' (0x2591) */
+  let lightShade = fromInt(0x2591);
+
+  /** '▒' (0x2592) */
+  let mediumShade = fromInt(0x2592);
+
+  /** '▓' (0x2593) */
+  let darkShade = fromInt(0x2593);
+
+  /** '▔' (0x2594) */
+  let upperOneEighthBlock = fromInt(0x2594);
+
+  /** '▕' (0x2595) */
+  let rightOneEighthBlock = fromInt(0x2595);
+
+  /** '▖' (0x2596) */
+  let quadrantLowerLeft = fromInt(0x2596);
+
+  /** '▗' (0x2597) */
+  let quadrantLowerRight = fromInt(0x2597);
+
+  /** '▘' (0x2598) */
+  let quadrantUpperLeft = fromInt(0x2598);
+
+  /** '▙' (0x2599) */
+  let quadrantUpperLeftAndLowerLeftAndLowerRight = fromInt(0x2599);
+
+  /** '▚' (0x259A) */
+  let quadrantUpperLeftAndLowerRight = fromInt(0x259A);
+
+  /** '▛' (0x259B) */
+  let quadrantUpperLeftAndUpperRightAndLowerLeft = fromInt(0x259B);
+
+  /** '▜' (0x259C) */
+  let quadrantUpperLeftAndUpperRightAndLowerRight = fromInt(0x259C);
+
+  /** '▝' (0x259D) */
+  let quadrantUpperRight = fromInt(0x259D);
+
+  /** '▞' (0x259E) */
+  let quadrantUpperRightAndLowerLeft = fromInt(0x259E);
+
+  /** '▟' (0x259F) */
+  let quadrantUpperRightAndLowerLeftAndLowerRight = fromInt(0x259F);
 };
 
 module BoxDrawings = {
@@ -416,4 +500,114 @@ module BoxDrawings = {
 
   /** '╿' (0x257F) */
   let heavyUpAndLightDown = fromInt(0x257F);
+};
+
+module Currency = {
+  /** '$' (0x0024) */
+  let dollarSign = fromInt(0x0024);
+
+  /** '¢' (0x00A2) */
+  let centSign = fromInt(0x00A2);
+
+  /** '£' (0x00A3) */
+  let poundSign = fromInt(0x00A3);
+
+  /** '¤' (0x00A4) */
+  let currencySign = fromInt(0x00A4);
+
+  /** '¥' (0x00A5) */
+  let yenSign = fromInt(0x00A5);
+
+  /** '₠' (0x20A0) - Not the Euro. Not widely used. */
+  let euroCurrencySign = fromInt(0x20A0);
+
+  /** '₡' (0x20A1) */
+  let colonSign = fromInt(0x20A1);
+
+  /** '₢' (0x20A2) */
+  let cruzeiroSign = fromInt(0x20A2);
+
+  /** '₣' (0x20A3) */
+  let frenchFrancSign = fromInt(0x20A3);
+
+  /** '₤' (0x20A4) - Not widely used. Preferred character for lira is `pound`. */
+  let liraSign = fromInt(0x20A4);
+
+  /** '₥' (0x20A5) */
+  let millSign = fromInt(0x20A5);
+
+  /** '₦' (0x20A6) */
+  let nairaSign = fromInt(0x20A6);
+
+  /** '₧' (0x20A7) */
+  let pesetaSign = fromInt(0x20A7);
+
+  /** '₨' (0x20A8) - India, unofficial legacy practice. See `indianRupee`. */
+  let rupeeSign = fromInt(0x20A8);
+
+  /** '₩' (0x20A9) */
+  let wonSign = fromInt(0x20A9);
+
+  /** '₪' (0x20AA) */
+  let newSheqelSign = fromInt(0x20AA);
+
+  /** '₫' (0x20AB) */
+  let dongSign = fromInt(0x20AB);
+
+  /** '€' (0x20AC) */
+  let euroSign = fromInt(0x20AC);
+
+  /** '₭' (0x20AD) */
+  let kipSign = fromInt(0x20AD);
+
+  /** '₮' (0x20AE) */
+  let tugrikSign = fromInt(0x20AE);
+
+  /** '₯' (0x20AF) */
+  let drachmaSign = fromInt(0x20AF);
+
+  /** '₰' (0x20B0) */
+  let germanPennySign = fromInt(0x20B0);
+
+  /** '₱' (0x20B1) */
+  let pesoSign = fromInt(0x20B1);
+
+  /** '₲' (0x20B2) */
+  let guaraniSign = fromInt(0x20B2);
+
+  /** '₳' (0x20B3) */
+  let australSign = fromInt(0x20B3);
+
+  /** '₴' (0x20B4) */
+  let hryvniaSign = fromInt(0x20B4);
+
+  /** '₵' (0x20B5) */
+  let cediSign = fromInt(0x20B5);
+
+  /** '₶' (0x20B6) */
+  let livreTournoisSign = fromInt(0x20B6);
+
+  /** '₷' (0x20B7) */
+  let spesmiloSign = fromInt(0x20B7);
+
+  /** '₸' (0x20B8) */
+  let tengeSign = fromInt(0x20B8);
+
+  /** '₹' (0x20B9) */
+  let indianRupeeSign = fromInt(0x20B9);
+
+  /** '₺' (0x20BA) */
+  let turkishLiraSign = fromInt(0x20BA);
+
+  /** '₻' (0x20BB) */
+  let nordicMarkSign = fromInt(0x20BB);
+
+  /** '₼' (0x20BC) */
+  let manatSign = fromInt(0x20BC);
+
+  /** '₽' (0x20BD) */
+  let rubleSign = fromInt(0x20BD);
+
+  /** '₾' (0x20BE) */
+  let lariSign = fromInt(0x20BE);
 };
