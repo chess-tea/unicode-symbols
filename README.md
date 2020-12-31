@@ -4,9 +4,10 @@ An easy way to reference and use different unicode symbols.
 
 # Usage
 
-The `UnicodeSymbols` module is meant to give easy access to `strings` for common
-unicode symbols. This prevents you from needing to copy/paste the symbols, or
-figuring out how to convert from a hex code to the symbol.
+The [`UnicodeSymbols`](./src/UnicodeSymbols.re) module is meant to give easy
+access to `strings` for common unicode symbols. This prevents you from needing
+to copy/paste the symbols, or figuring out how to convert from a hex code to
+the symbol.
 
 ```reason
 let box =
